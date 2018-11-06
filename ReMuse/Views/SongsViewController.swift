@@ -35,7 +35,9 @@ class SongsViewController: UITableViewController {
         }
     }
     
+    
     // MARK: - Table view data source
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String {
         if section == 0 {
             return "Sample Songs"
@@ -117,18 +119,41 @@ class SongsViewController: UITableViewController {
         }
     }
     
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
         
-//        if segue.identifier == "SongSegue" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                if let songVC = segue.destination as? SongViewController {
-//                    songVC.song = songsList[(indexPath as NSIndexPath).row]
-//                    songVC.title = songVC.song!.value(forProperty: MPMediaItemPropertyTitle) as? String
-//                }
-//            }
-//        }
-        
+        if segue.identifier == "SongSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow, let songVC = segue.destination as? SongViewController {
+                if indexPath.section == 0 {
+                    let song = sampleSongList[(indexPath as NSIndexPath).row]
+                    songVC.songURL = (song.asset as! AVURLAsset).url
+                    for item in song.asset.metadata {
+                        guard let key = item.commonKey?.rawValue, let value = item.value else {
+                            continue
+                        }
+                        switch key {
+                            case "title" : songVC.title = value as? String
+                            case "artwork" :songVC.art = UIImage(data: value as! Data)
+                            default:
+                                break
+                        }
+                    }
+                }
+                else {
+                    let song = songsList[(indexPath as NSIndexPath).row]
+                    guard let url = song.value(forProperty: MPMediaItemPropertyAssetURL) as? URL else {
+                        return
+                    }
+                    songVC.songURL = url
+                    songVC.title = song.value(forProperty: MPMediaItemPropertyTitle) as? String
+                    songVC.art = (song.value(forProperty: MPMediaItemPropertyArtwork) as? MPMediaItemArtwork)?.image(at: self.view.bounds.size)
+                }
+            }
+        }
     }
 }

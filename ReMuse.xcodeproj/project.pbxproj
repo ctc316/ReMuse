@@ -18,6 +18,7 @@
 		618EC197218F8A12003280E7 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC196218F8A12003280E7 /* SongsViewController.swift */; };
 		61A344102190B375007F53C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A3440F2190B375007F53C0 /* Assets.xcassets */; };
 		61A344232190B59E007F53C0 /* Soundtracks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61A344222190B59D007F53C0 /* Soundtracks.bundle */; };
+		61D4C51821914711003FA479 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4C51721914711003FA479 /* SongViewController.swift */; };
 		65DC138D99FB7ECC50831587 /* Pods_ReMuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8766BC13AC86A8204B2E01 /* Pods_ReMuse.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		618EC196218F8A12003280E7 /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		61A3440F2190B375007F53C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61A344222190B59D007F53C0 /* Soundtracks.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Soundtracks.bundle; sourceTree = "<group>"; };
+		61D4C51721914711003FA479 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		908E1CB35CE2F29338F5A72F /* Pods-ReMuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3A617BFF6057C8EB33DEAE /* Pods-ReMuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +78,6 @@
 			children = (
 				61A344222190B59D007F53C0 /* Soundtracks.bundle */,
 				618EC190218F895D003280E7 /* SongProcessor */,
-				61695292217977C400C60B53 /* Images */,
 				6169528D2179748D00C60B53 /* Views */,
 				6110BDCF21795E6D00ADB809 /* AppDelegate.swift */,
 				6110BDD121795E6D00ADB809 /* ViewController.swift */,
@@ -94,15 +95,9 @@
 				6169528E2179750A00C60B53 /* SongView.xib */,
 				616952902179752A00C60B53 /* SongView.swift */,
 				618EC196218F8A12003280E7 /* SongsViewController.swift */,
+				61D4C51721914711003FA479 /* SongViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		61695292217977C400C60B53 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		618EC190218F895D003280E7 /* SongProcessor */ = {
@@ -237,6 +232,7 @@
 				6110BDD221795E6D00ADB809 /* ViewController.swift in Sources */,
 				618EC195218F899D003280E7 /* SongProcessor.swift in Sources */,
 				6110BDD021795E6D00ADB809 /* AppDelegate.swift in Sources */,
+				61D4C51821914711003FA479 /* SongViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

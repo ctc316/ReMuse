@@ -61,16 +61,16 @@ class SongProcessor: NSObject, UIDocumentInteractionControllerDelegate {
 
     override init() {
         super.init()
-        for name in ["bass", "drum", "guitar", "lead"] {
-            do {
-                let audioFile = try AKAudioFile(readFileName: name+"loop.wav", baseDir: .resources)
-                players[name] = AKPlayer(audioFile: audioFile)
-                players[name]?.isLooping = true
-                players[name]?.connect(to: playerMixer)
-            } catch {
-                fatalError(String(describing: error))
-            }
-        }
+//        for name in ["bass", "drum", "guitar", "lead"] {
+//            do {
+//                let audioFile = try AKAudioFile(readFileName: name+"loop.wav", baseDir: .resources)
+//                players[name] = AKPlayer(audioFile: audioFile)
+//                players[name]?.isLooping = true
+//                players[name]?.connect(to: playerMixer)
+//            } catch {
+//                fatalError(String(describing: error))
+//            }
+//        }
 
         playerMixer >>>
             delayMixer >>>

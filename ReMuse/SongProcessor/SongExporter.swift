@@ -20,14 +20,10 @@ class SongExporter {
         self.exportPath = exportPath
     }
 
-    func exportSong(_ song: MPMediaItem, completion: ((Bool) -> Void)? = nil) {
+    func exportSong(_ url: URL, completion: ((Bool) -> Void)? = nil) {
 
         isReadyToPlay = false
-
-        guard let url = song.value(forProperty: MPMediaItemPropertyAssetURL) as? URL else {
-            completion?(false)
-            return
-        }
+    
         let songAsset = AVURLAsset(url: url, options: nil)
 
         var assetError: NSError?
