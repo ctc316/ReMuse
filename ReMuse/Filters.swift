@@ -91,23 +91,23 @@ public class Filters{
         switch index {
         case 0:
             if on {
-                songProcessor.variableDelay.time = 0.8
-                songProcessor.variableDelay.feedback = 0.5
-                songProcessor.delayMixer.balance = 1
+                songProcessor.variableDelay.time = 0.70
+                songProcessor.variableDelay.feedback = 0.3
+                songProcessor.delayMixer.balance = 0.4
             } else {
-                songProcessor.delayMixer.balance = 0
+                songProcessor.delayMixer.balance = 0.0
             }
         case 1:
             if on {
-                songProcessor.moogLadder.cutoffFrequency = 2000
-                songProcessor.moogLadder.resonance = 0.7
-                songProcessor.filterMixer.balance = 1
+                songProcessor.moogLadder.cutoffFrequency = 2200
+                songProcessor.moogLadder.resonance = 0.75
+                songProcessor.filterMixer.balance = 1.0
             } else {
                 songProcessor.filterMixer.balance = 0
             }
         case 2:
             if on {
-                songProcessor.reverb.feedback = 0.5
+                songProcessor.reverb.feedback = 0.8
                 songProcessor.reverbMixer.balance = 1
             } else {
                 songProcessor.reverbMixer.balance = 0
@@ -123,10 +123,12 @@ public class Filters{
         case 4:
             let songProcessor = SongProcessor.sharedInstance
             if on {
-                songProcessor.bitCrusher.bitDepth = 20
-                songProcessor.bitCrusher.sampleRate = 4000
-                songProcessor.bitCrushMixer.balance = 1
+                songProcessor.bitCrusher.bitDepth = 8
+                songProcessor.bitCrusher.sampleRate = 8000
+                songProcessor.bitCrushMixer.balance = 0.5
             } else {
+                songProcessor.bitCrusher.bitDepth = 16
+                songProcessor.bitCrusher.sampleRate = 3_333
                 songProcessor.bitCrushMixer.balance = 0
             }
         default:
