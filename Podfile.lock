@@ -5,17 +5,29 @@ PODS:
   - AudioKit/Core (4.5.3)
   - AudioKit/UI (4.5.3):
     - AudioKit/Core
+  - FDWaveformView (3.0.1)
+  - RangeSeekSlider (1.7.0)
+  - SoundWave (0.1.2)
 
 DEPENDENCIES:
   - AudioKit
+  - FDWaveformView
+  - RangeSeekSlider
+  - SoundWave
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AudioKit
+    - FDWaveformView
+    - RangeSeekSlider
+    - SoundWave
 
 SPEC CHECKSUMS:
   AudioKit: 086927b955ed65d9d3398006eaa7a5c39ae8a7f1
+  FDWaveformView: 382333698e71680953f115e4c6faeb63a8cfde74
+  RangeSeekSlider: 0386c5a9aa5ebcb2fa5238e8a627280cf46c7c0a
+  SoundWave: 74af192045482ba1b881c6fd063655bb46162fa0
 
-PODFILE CHECKSUM: bec1994cdd0db49045d565905ea26e19addf7b0d
+PODFILE CHECKSUM: d0478bfaffa73c2b49ca9f0bf6629267047f3cd8
 
 COCOAPODS: 1.5.3

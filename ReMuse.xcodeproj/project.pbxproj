@@ -167,6 +167,7 @@
 				6110BDC821795E6D00ADB809 /* Sources */,
 				6110BDC921795E6D00ADB809 /* Frameworks */,
 				6110BDCA21795E6D00ADB809 /* Resources */,
+				C2BCECB1550BDCB12C4F03AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +227,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C2BCECB1550BDCB12C4F03AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FDWaveformView/FDWaveformView.framework",
+				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/SoundWave/SoundWave.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDWaveformView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SoundWave.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DF55EA9209AFC24FB1E64260 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

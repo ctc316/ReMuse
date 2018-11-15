@@ -10,6 +10,8 @@ import AudioKit
 import AVFoundation
 import MediaPlayer
 import UIKit
+import FDWaveformView
+
 
 class SongViewController: UIViewController {
 
@@ -53,7 +55,7 @@ class SongViewController: UIViewController {
                             self.loadSong()
                             self.playButton.isUserInteractionEnabled = true
                             self.playButton.setTitle("Stop", for: UIControl.State())
-                            self.songProcessor.iTunesPlaying = true
+//                            self.songProcessor.iTunesPlaying = true
                         } else {
                             fail()
                         }
@@ -79,7 +81,7 @@ class SongViewController: UIViewController {
     }
 
     @IBAction func play(_ sender: UIButton) {
-        songProcessor.iTunesPlaying = !songProcessor.iTunesPlaying
+//        songProcessor.iTunesPlaying = !songProcessor.iTunesPlaying
         playButton.setTitle(songProcessor.iTunesPlaying ? "Stop" : "Play", for: UIControl.State())
     }
 
@@ -87,7 +89,10 @@ class SongViewController: UIViewController {
     func loadSong() {
 
         let url = URL(fileURLWithPath: exportPath)
-
+        
+        //display
+//        self.waveformView.audioURL = url
+        
         if FileManager.default.fileExists(atPath: url.path) == false {
             print("exportPath: \(exportPath)")
             print("File does not exist.")
@@ -116,4 +121,5 @@ class SongViewController: UIViewController {
             }
         }
     }
+    @IBOutlet weak var waveformView: FDWaveformView!
 }
