@@ -53,7 +53,6 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
                         cell.imageAvatar.isHidden   = true
                     }
                 }
-                
             }
            
         //Item is custom type
@@ -77,6 +76,7 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
         
         //Set item color
         if item.color != nil{
+            cell.backgroundColor = item.color
             cell.initials.backgroundColor = item.color!
         }
         

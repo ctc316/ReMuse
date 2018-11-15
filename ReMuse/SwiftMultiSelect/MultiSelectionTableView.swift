@@ -28,25 +28,6 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
         }else{
             return SwiftMultiSelect.items!.filter({$0.title.lowercased().contains(searchString.lowercased()) || ($0.description != nil && $0.description!.lowercased().contains(searchString.lowercased())) }).count
         }
-        
-        
-//        if SwiftMultiSelect.dataSourceType == .phone{
-//            if searchString == "" {
-//                return SwiftMultiSelect.items!.count
-//            }else{
-//                return SwiftMultiSelect.items!.filter({$0.title.lowercased().contains(searchString.lowercased()) || ($0.description != nil && $0.description!.lowercased().contains(searchString.lowercased())) }).count
-//            }
-//        }else{
-//
-////            Try to get rows from delegate
-//            guard let rows = SwiftMultiSelect.dataSource?.numberOfItemsInSwiftMultiSelect() else {
-//                return 0
-//            }
-//
-//            return rows
-//        }
-        
-    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,61 +41,8 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
         
         //Configure cell properties
         cell.titleLabel.text        = item.title
-        cell.backgroundColor = Config.colorArray[indexPath.row % Config.colorArray.count]
+        cell.backgroundColor = item.color
 //        cell.bgImage.image = UIImage(named: "song1")
-        
-//        cell.labelTitle.text        = item.title
-//        cell.labelSubTitle.text     = item.description
-//        cell.initials.isHidden      = true
-//        cell.imageAvatar.isHidden   = true
-
-        
-//        if let contact = item.userInfo as? CNContact{
-//
-//            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
-//
-//                if(contact.imageDataAvailable && contact.imageData!.count > 0){
-//                    let img = UIImage(data: contact.imageData!)
-//                    DispatchQueue.main.async {
-//                        item.image = img
-//                        cell.imageAvatar.image      = img
-//                        cell.initials.isHidden      = true
-//                        cell.imageAvatar.isHidden   = false
-//                    }
-//                }else{
-//                    DispatchQueue.main.async {
-//                        cell.initials.text          = item.getInitials()
-//                        cell.initials.isHidden      = false
-//                        cell.imageAvatar.isHidden   = true
-//                    }
-//                }
-//
-//            }
-//
-//        }else{
-//            if item.image == nil && item.imageURL == nil{
-//                cell.initials.text          = item.getInitials()
-//                cell.initials.isHidden      = false
-//                cell.imageAvatar.isHidden   = true
-//            }else{
-//                if item.imageURL != ""{
-//                    cell.initials.isHidden      = true
-//                    cell.imageAvatar.isHidden   = false
-//                    cell.imageAvatar.setImageFromURL(stringImageUrl: item.imageURL!)
-//                }else{
-//                    cell.imageAvatar.image      = item.image
-//                    cell.initials.isHidden      = true
-//                    cell.imageAvatar.isHidden   = false
-//                }
-//            }
-//        }
-        
-//        if item.color != nil{
-//            cell.initials.backgroundColor = item.color!
-//        }else{
-//            cell.initials.backgroundColor   = updateInitialsColorForIndexPath(indexPath)
-//        }
-        
         
         //Set initial state
         if self.selectedItems.index(where: { (itm) -> Bool in
@@ -127,7 +55,6 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
         
         
         return cell
-        
     }
     
     
@@ -153,6 +80,7 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
     func reloadCellState(row:Int, selected:Bool){
         
         if let cell = self.tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? CustomOneCell{
+            Filters.filter(index: row, on: selected)
             cell.accessoryType = (selected) ? .checkmark : .none
         }
         
@@ -165,12 +93,10 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
 
         let item:SwiftMultiSelectItem! = (searchString == "") ?  SwiftMultiSelect.items![indexPath.row] : SwiftMultiSelect.items!.filter({$0.title.lowercased().contains(searchString.lowercased()) || ($0.description != nil && $0.description!.lowercased().contains(searchString.lowercased())) })[indexPath.row]
         
-        //Save item data 
-//        item.color = cell.initials.backgroundColor!
-
         //Check if cell is already selected or not
         if cell.accessoryType == UITableViewCell.AccessoryType.checkmark
         {
+            Filters.filter(index: indexPath.row, on: false)
             
             //Set accessory type
             cell.accessoryType = UITableViewCell.AccessoryType.none
@@ -183,6 +109,7 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
             
         }
         else{
+            Filters.filter(index: indexPath.row, on: true)
             
             //Set accessory type
             cell.accessoryType = UITableViewCell.AccessoryType.checkmark
