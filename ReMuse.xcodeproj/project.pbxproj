@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		6110BDD021795E6D00ADB809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110BDCF21795E6D00ADB809 /* AppDelegate.swift */; };
-		6110BDD221795E6D00ADB809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110BDD121795E6D00ADB809 /* ViewController.swift */; };
 		6110BDD521795E6D00ADB809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6110BDD321795E6D00ADB809 /* Main.storyboard */; };
 		61695288217965ED00C60B53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61695287217965ED00C60B53 /* Launch Screen.storyboard */; };
-		6169528F2179750A00C60B53 /* SongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6169528E2179750A00C60B53 /* SongView.xib */; };
-		616952912179752A00C60B53 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616952902179752A00C60B53 /* SongView.swift */; };
 		618EC194218F899D003280E7 /* SongExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC191218F899D003280E7 /* SongExporter.swift */; };
 		618EC195218F899D003280E7 /* SongProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC193218F899D003280E7 /* SongProcessor.swift */; };
 		618EC197218F8A12003280E7 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC196218F8A12003280E7 /* SongsViewController.swift */; };
 		61A344102190B375007F53C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A3440F2190B375007F53C0 /* Assets.xcassets */; };
 		61A344232190B59E007F53C0 /* Soundtracks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61A344222190B59D007F53C0 /* Soundtracks.bundle */; };
+		61AB0FB6219CD48700A36927 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FB5219CD48700A36927 /* FilterViewController.swift */; };
+		61AB0FCE219CE7F200A36927 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FC6219CE7F100A36927 /* CustomCollectionCell.swift */; };
+		61AB0FCF219CE7F200A36927 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FC7219CE7F200A36927 /* CustomTableCell.swift */; };
+		61AB0FD0219CE7F200A36927 /* MultiSelectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FC8219CE7F200A36927 /* MultiSelectionCollectionView.swift */; };
+		61AB0FD1219CE7F200A36927 /* SwiftMultiSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FC9219CE7F200A36927 /* SwiftMultiSelect.swift */; };
+		61AB0FD2219CE7F200A36927 /* ContactsLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FCA219CE7F200A36927 /* ContactsLibrary.swift */; };
+		61AB0FD3219CE7F200A36927 /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FCB219CE7F200A36927 /* MultiSelectionViewController.swift */; };
+		61AB0FD4219CE7F200A36927 /* MultiSelectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FCC219CE7F200A36927 /* MultiSelectionTableView.swift */; };
+		61AB0FD6219D058200A36927 /* CustomOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AB0FD5219D058200A36927 /* CustomOneCell.xib */; };
+		61AB0FD8219D10C200A36927 /* CustomOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AB0FD7219D10C200A36927 /* CustomOneCell.swift */; };
 		61D4C51821914711003FA479 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4C51721914711003FA479 /* SongViewController.swift */; };
 		65DC138D99FB7ECC50831587 /* Pods_ReMuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8766BC13AC86A8204B2E01 /* Pods_ReMuse.framework */; };
 /* End PBXBuildFile section */
@@ -26,18 +33,25 @@
 		1A8766BC13AC86A8204B2E01 /* Pods_ReMuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReMuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6110BDCC21795E6D00ADB809 /* ReMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6110BDCF21795E6D00ADB809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6110BDD121795E6D00ADB809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6110BDD421795E6D00ADB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6110BDDB21795E6F00ADB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61695287217965ED00C60B53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		6169528E2179750A00C60B53 /* SongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongView.xib; sourceTree = "<group>"; };
-		616952902179752A00C60B53 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		618EC191218F899D003280E7 /* SongExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongExporter.swift; sourceTree = "<group>"; };
 		618EC192218F899D003280E7 /* SongProcessor.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SongProcessor.entitlements; sourceTree = "<group>"; };
 		618EC193218F899D003280E7 /* SongProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongProcessor.swift; sourceTree = "<group>"; };
 		618EC196218F8A12003280E7 /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
 		61A3440F2190B375007F53C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61A344222190B59D007F53C0 /* Soundtracks.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Soundtracks.bundle; sourceTree = "<group>"; };
+		61AB0FB5219CD48700A36927 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		61AB0FC6219CE7F100A36927 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
+		61AB0FC7219CE7F200A36927 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		61AB0FC8219CE7F200A36927 /* MultiSelectionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionCollectionView.swift; sourceTree = "<group>"; };
+		61AB0FC9219CE7F200A36927 /* SwiftMultiSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMultiSelect.swift; sourceTree = "<group>"; };
+		61AB0FCA219CE7F200A36927 /* ContactsLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsLibrary.swift; sourceTree = "<group>"; };
+		61AB0FCB219CE7F200A36927 /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
+		61AB0FCC219CE7F200A36927 /* MultiSelectionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionTableView.swift; sourceTree = "<group>"; };
+		61AB0FD5219D058200A36927 /* CustomOneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomOneCell.xib; sourceTree = "<group>"; };
+		61AB0FD7219D10C200A36927 /* CustomOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOneCell.swift; sourceTree = "<group>"; };
 		61D4C51721914711003FA479 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		908E1CB35CE2F29338F5A72F /* Pods-ReMuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3A617BFF6057C8EB33DEAE /* Pods-ReMuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReMuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReMuse/Pods-ReMuse.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,11 +90,11 @@
 		6110BDCE21795E6D00ADB809 /* ReMuse */ = {
 			isa = PBXGroup;
 			children = (
+				61AB0FB7219CE6FD00A36927 /* SwiftMultiSelect */,
 				61A344222190B59D007F53C0 /* Soundtracks.bundle */,
 				618EC190218F895D003280E7 /* SongProcessor */,
 				6169528D2179748D00C60B53 /* Views */,
 				6110BDCF21795E6D00ADB809 /* AppDelegate.swift */,
-				6110BDD121795E6D00ADB809 /* ViewController.swift */,
 				61A3440F2190B375007F53C0 /* Assets.xcassets */,
 				6110BDD321795E6D00ADB809 /* Main.storyboard */,
 				6110BDDB21795E6F00ADB809 /* Info.plist */,
@@ -92,10 +106,9 @@
 		6169528D2179748D00C60B53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6169528E2179750A00C60B53 /* SongView.xib */,
-				616952902179752A00C60B53 /* SongView.swift */,
 				618EC196218F8A12003280E7 /* SongsViewController.swift */,
 				61D4C51721914711003FA479 /* SongViewController.swift */,
+				61AB0FB5219CD48700A36927 /* FilterViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +121,22 @@
 				618EC193218F899D003280E7 /* SongProcessor.swift */,
 			);
 			path = SongProcessor;
+			sourceTree = "<group>";
+		};
+		61AB0FB7219CE6FD00A36927 /* SwiftMultiSelect */ = {
+			isa = PBXGroup;
+			children = (
+				61AB0FCA219CE7F200A36927 /* ContactsLibrary.swift */,
+				61AB0FC6219CE7F100A36927 /* CustomCollectionCell.swift */,
+				61AB0FC7219CE7F200A36927 /* CustomTableCell.swift */,
+				61AB0FC8219CE7F200A36927 /* MultiSelectionCollectionView.swift */,
+				61AB0FCC219CE7F200A36927 /* MultiSelectionTableView.swift */,
+				61AB0FCB219CE7F200A36927 /* MultiSelectionViewController.swift */,
+				61AB0FC9219CE7F200A36927 /* SwiftMultiSelect.swift */,
+				61AB0FD5219D058200A36927 /* CustomOneCell.xib */,
+				61AB0FD7219D10C200A36927 /* CustomOneCell.swift */,
+			);
+			path = SwiftMultiSelect;
 			sourceTree = "<group>";
 		};
 		7CE87184028F1187493F960D /* Pods */ = {
@@ -188,9 +217,9 @@
 			files = (
 				61695288217965ED00C60B53 /* Launch Screen.storyboard in Resources */,
 				61A344232190B59E007F53C0 /* Soundtracks.bundle in Resources */,
+				61AB0FD6219D058200A36927 /* CustomOneCell.xib in Resources */,
 				6110BDD521795E6D00ADB809 /* Main.storyboard in Resources */,
 				61A344102190B375007F53C0 /* Assets.xcassets in Resources */,
-				6169528F2179750A00C60B53 /* SongView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,13 +255,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616952912179752A00C60B53 /* SongView.swift in Sources */,
+				61AB0FD8219D10C200A36927 /* CustomOneCell.swift in Sources */,
 				618EC197218F8A12003280E7 /* SongsViewController.swift in Sources */,
+				61AB0FB6219CD48700A36927 /* FilterViewController.swift in Sources */,
 				618EC194218F899D003280E7 /* SongExporter.swift in Sources */,
-				6110BDD221795E6D00ADB809 /* ViewController.swift in Sources */,
+				61AB0FCF219CE7F200A36927 /* CustomTableCell.swift in Sources */,
+				61AB0FD4219CE7F200A36927 /* MultiSelectionTableView.swift in Sources */,
+				61AB0FD0219CE7F200A36927 /* MultiSelectionCollectionView.swift in Sources */,
+				61AB0FD3219CE7F200A36927 /* MultiSelectionViewController.swift in Sources */,
 				618EC195218F899D003280E7 /* SongProcessor.swift in Sources */,
 				6110BDD021795E6D00ADB809 /* AppDelegate.swift in Sources */,
+				61AB0FD2219CE7F200A36927 /* ContactsLibrary.swift in Sources */,
 				61D4C51821914711003FA479 /* SongViewController.swift in Sources */,
+				61AB0FCE219CE7F200A36927 /* CustomCollectionCell.swift in Sources */,
+				61AB0FD1219CE7F200A36927 /* SwiftMultiSelect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

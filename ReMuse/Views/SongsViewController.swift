@@ -11,7 +11,6 @@ import MediaPlayer
 import UIKit
 
 class SongsViewController: UITableViewController {
-    
     var albumName: String!
     var artistName: String!
     var songsList = [MPMediaItem]()
@@ -33,6 +32,20 @@ class SongsViewController: UITableViewController {
             songsList = items
             tableView.reloadData()
         }
+        
+        createItems()
+    }
+    
+    // MARK: - Filters
+    
+    /// Create a custom items set for filters
+    func createItems(){
+        var items:[SwiftMultiSelectItem] = [SwiftMultiSelectItem]()
+        for i in 0..<50{
+            items.append(SwiftMultiSelectItem(row: i, title: "test\(i)", description: "description for: \(i)", imageURL : (i == 1 ? "https://randomuser.me/api/portraits/women/68.jpg" : nil)))
+        }
+        
+        SwiftMultiSelect.items = items
     }
     
     
