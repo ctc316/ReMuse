@@ -17,81 +17,58 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
         return self.selectedItems.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = self.selectedItems[indexPath.row]
+        
+        //remove item
+        reloadAndPositionScroll(idp: item.row!, remove: true)
+        
+        if self.selectedItems.count <= 0 {
+            //Comunicate deselection to delegate
+            toggleSelectionScrollView(show: false)
+        }
+        print(indexPath.row)
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! CustomCollectionCell
  
         //Try to get item from delegate
-        var item = self.selectedItems[indexPath.row]
+        let item = self.selectedItems[indexPath.row]
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 1
+        cell.removeButton.addGestureRecognizer(tap)
+        cell.initials.addGestureRecognizer(tap)
         
         //Add target for the button
         cell.removeButton.addTarget(self, action: #selector(MultiSelecetionViewController.handleTap(sender:)), for: .touchUpInside)
         cell.removeButton.tag       = item.row!
-        cell.labelTitle.text        = item.title
-        cell.initials.isHidden      = true
+//        cell.labelTitle.text        = item.title
+        cell.initials.text          = item.initials
+//        cell.initials.isHidden      = true
         cell.imageAvatar.isHidden   = true
         
-        //Test if items it's CNContact
-        if let contact = item.userInfo as? CNContact{
-            
-            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
-                
-                //Build contact image in background
-                if(contact.imageDataAvailable && contact.imageData!.count > 0){
-                    let img = UIImage(data: contact.imageData!)
-                    DispatchQueue.main.async {
-                        item.image = img
-                        cell.imageAvatar.image      = img
-                        cell.initials.isHidden      = true
-                        cell.imageAvatar.isHidden   = false
-                    }
-                }else{
-                    DispatchQueue.main.async {
-                        cell.initials.text          = item.getInitials()
-                        cell.initials.isHidden      = false
-                        cell.imageAvatar.isHidden   = true
-                    }
-                }
-            }
-           
-        //Item is custom type
-        }else{
-            if item.image == nil && item.imageURL == nil{
-                cell.initials.text          = item.getInitials()
-                cell.initials.isHidden      = false
-                cell.imageAvatar.isHidden   = true
-            }else{
-                if item.imageURL != ""{
-                    cell.initials.isHidden      = true
-                    cell.imageAvatar.isHidden   = false
-                    cell.imageAvatar.setImageFromURL(stringImageUrl: item.imageURL!)
-                }else{
-                    cell.imageAvatar.image      = item.image
-                    cell.initials.isHidden      = true
-                    cell.imageAvatar.isHidden   = false
-                }
-            }
-        }
         
         //Set item color
         if item.color != nil{
-            cell.backgroundColor = item.color
+            cell.backgroundColor = .clear
             cell.initials.backgroundColor = item.color!
         }
         
         return cell
-        
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize
-    {
-        
-        return CGSize(width: CGFloat(Config.selectorStyle.selectionHeight),height: CGFloat(Config.selectorStyle.selectionHeight))
     }
     
-    @objc func handleTap(sender:UIButton){
+    @objc func doubleTapped(){
+        print("doubleTapped")
+    }
 
+    
+    @objc func handleTap(sender: UIButton){
+        print("HELLO")
         //Find current item
         let item = selectedItems.filter { (itm) -> Bool in
             itm.row == sender.tag
@@ -164,10 +141,8 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
             }
             
             
-            
         //Add
         }else{
-            
             toggleSelectionScrollView(show: true)
             
             //Reload data
@@ -178,14 +153,7 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
             self.selectionScrollView.scrollToItem(at: lastItemIndex, at: .right, animated: true)
             
             reloadCellState(row: idp, selected: true)
-            
-        
         }
-        
-        
-        
     }
-    
-    
 }
 

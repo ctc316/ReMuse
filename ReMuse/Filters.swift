@@ -25,6 +25,7 @@ public class Filters{
         items.append(SwiftMultiSelectItem(
             row         : 0,
             title       : "Delay",
+            initials    : "Delay",
             description : "",
             image       : UIImage(),
             imageURL    : "",
@@ -36,6 +37,7 @@ public class Filters{
         items.append(SwiftMultiSelectItem(
             row         : 1,
             title       : "Moog Ladder",
+            initials    : "Moog",
             description : "",
             image       : UIImage(),
             imageURL    : "",
@@ -47,6 +49,7 @@ public class Filters{
         items.append(SwiftMultiSelectItem(
             row         : 2,
             title       : "Costello Reverb",
+            initials    : "Reverb",
             description : "",
             image       : UIImage(),
             imageURL    : "",
@@ -58,6 +61,7 @@ public class Filters{
         items.append(SwiftMultiSelectItem(
             row         : 3,
             title       : "Pitch Shifter",
+            initials    : "Pitch",
             description : "",
             image       : UIImage(),
             imageURL    : "",
@@ -69,6 +73,7 @@ public class Filters{
         items.append(SwiftMultiSelectItem(
             row         : 4,
             title       : "Bit Crusher",
+            initials    : "Bit",
             description : "",
             image       : UIImage(),
             imageURL    : "",

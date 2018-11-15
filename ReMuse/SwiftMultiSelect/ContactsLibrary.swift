@@ -75,7 +75,7 @@ public class ContactsLibrary{
                             companyName     = ""
                         }
                         
-                        let item_contact = SwiftMultiSelectItem(row: row, title: username, description: companyName, image: nil, imageURL: nil, color: nil, userInfo: contact)
+                        let item_contact = SwiftMultiSelectItem(row: row, title: username, initials: "", description: companyName, image: nil, imageURL: nil, color: nil, userInfo: contact)
                         contactsArray.append(item_contact)
                         
                         row += 1

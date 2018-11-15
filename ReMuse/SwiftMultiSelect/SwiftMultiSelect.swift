@@ -186,6 +186,7 @@ public struct ThemeColors{
 public struct SwiftMultiSelectItem{
     
     public var title        :   String
+    public var initials     :   String
     public var description  :   String?
     public var image        :   UIImage?
     public var imageURL     :   String?
@@ -215,10 +216,11 @@ public struct SwiftMultiSelectItem{
     ///   - image: image asset
     ///   - imageURL: image url
     ///   - userInfo: optional information data
-    public init(row:Int,title:String,description:String? = nil,image:UIImage? = nil,imageURL:String? = nil,color:UIColor? = nil, userInfo:Any? = nil) {
+    public init(row:Int,title:String,initials:String,description:String? = nil,image:UIImage? = nil,imageURL:String? = nil,color:UIColor? = nil, userInfo:Any? = nil) {
         
         self.title = title
         self.row   = row
+        self.initials = initials
         
         if let desc = description{
             self.description = desc

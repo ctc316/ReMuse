@@ -98,9 +98,9 @@ class CustomTableCell: UITableViewCell
         
         //Adjust avatar view frame
         imageAvatar.frame = CGRect(
-            x       : Config.tableStyle.avatarMargin,
-            y       : Config.tableStyle.avatarMargin,
-            width   : Config.tableStyle.tableRowHeight-(Config.tableStyle.avatarMargin*2),
+            x       : 0,
+            y       : 100,
+            width   : Config.tableStyle.tableRowHeight-(Config.tableStyle.avatarMargin*2) - 10,
             height  : Config.tableStyle.tableRowHeight-(Config.tableStyle.avatarMargin*2)
         )
         

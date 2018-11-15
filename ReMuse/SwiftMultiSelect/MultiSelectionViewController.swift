@@ -41,17 +41,19 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         
         //Build layout
         let layout                      = UICollectionViewFlowLayout()
-        layout.sectionInset             = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset             = UIEdgeInsets(top: 0, left: 3, bottom: 0, right: 0)
         layout.scrollDirection          = UICollectionView.ScrollDirection.horizontal
         layout.minimumInteritemSpacing  = 0
         layout.minimumLineSpacing       = 0
+        layout.itemSize                 = CGSize(
+            width: CGFloat(Config.selectorStyle.selectionHeight - 13),
+            height: CGFloat(Config.selectorStyle.selectionHeight))
         
         //Build collectin view
         let selected                    = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         selected.backgroundColor        = Config.selectorStyle.backgroundColor
         selected.isHidden               = (SwiftMultiSelect.initialSelected.count <= 0)
         return selected
-        
     }()
     
     /// Lazy view that represent a selection scrollview
@@ -133,6 +135,8 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         //Register collectionvie delegate
         selectionScrollView.delegate    =   self
         selectionScrollView.dataSource  =   self
+        selectionScrollView.isUserInteractionEnabled = true
+        selectionScrollView.alwaysBounceHorizontal = true
         //Register cell class
         selectionScrollView.register(CustomCollectionCell.classForCoder(), forCellWithReuseIdentifier: "cell")
         
@@ -234,5 +238,20 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
             rightButtonBar.title        = "\(Config.doneString) (\(SwiftMultiSelect.initialSelected.count))"
         }
         
+    }
+    
+//   override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+//        print("in shouldReceiveTouch")
+//        if (touch.view == autocompleteList){
+//            println("touching autocomplete list")
+//            return false
+//        }
+//        gestureRecognizer.delegate = self
+//        return true
+//    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.next?.touchesBegan(touches, with: event)
     }
 }

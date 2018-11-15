@@ -17,7 +17,7 @@ class CustomCollectionCell: UICollectionViewCell
     open fileprivate(set) lazy var labelTitle: UILabel = {
         
         let label = UILabel()
-        label.autoresizingMask          = [] //[.flexibleWidth]
+        label.autoresizingMask          = [.flexibleWidth]
         label.isOpaque                  = false
         label.backgroundColor           = UIColor.clear
         label.textAlignment             = NSTextAlignment.center
@@ -55,7 +55,7 @@ class CustomCollectionCell: UICollectionViewCell
         label.numberOfLines             = 1
         label.textColor                 = Config.selectorStyle.initials_color
         label.font                      = Config.selectorStyle.initials_font
-        label.layer.cornerRadius        = CGFloat(Config.selectorStyle.selectionHeight-((Config.selectorStyle.avatarScale*2.0)*Config.tableStyle.avatarMargin))/2.0
+        label.layer.cornerRadius        = CGFloat(Config.selectorStyle.selectionHeight-((Config.selectorStyle.avatarScale*3.5)*Config.tableStyle.avatarMargin))/3.5
         label.layer.masksToBounds       = true
         return label
         
@@ -66,11 +66,13 @@ class CustomCollectionCell: UICollectionViewCell
         
         let button = UIButton()
         button.setImage(Config.selectorStyle.removeButtonImage, for: .normal)
+        button.isEnabled = true
         return button
         
     }()
     
     override init(frame: CGRect) {
+        
         
         super.init(frame: frame)
         
@@ -79,8 +81,8 @@ class CustomCollectionCell: UICollectionViewCell
         
         //Adjust avatar view frame
         imageAvatar.frame = CGRect(
-            x       : Config.tableStyle.avatarMargin*Config.selectorStyle.avatarScale,
-            y       : Config.tableStyle.avatarMargin/Config.selectorStyle.avatarScale,
+            x       : 5,
+            y       : 15,
             width   : Config.selectorStyle.selectionHeight-((Config.selectorStyle.avatarScale*2.0)*Config.tableStyle.avatarMargin),
             height  : Config.selectorStyle.selectionHeight-((Config.selectorStyle.avatarScale*2.0)*Config.tableStyle.avatarMargin)
         )
@@ -91,8 +93,8 @@ class CustomCollectionCell: UICollectionViewCell
         //Adjust button frame
         let btnSize = imageAvatar.frame.size.width/3
         removeButton.frame = CGRect(
-            x: imageAvatar.frame.origin.x + imageAvatar.frame.size.width - (btnSize/1.5),
-            y: imageAvatar.frame.origin.y,
+            x: imageAvatar.frame.origin.x + imageAvatar.frame.size.width - (btnSize/1.5) + 3,
+            y: imageAvatar.frame.origin.y - 10,
             width: btnSize,
             height: btnSize
         )
