@@ -80,7 +80,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dES-uj-Lz8">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends_static" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-yg-kqO">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends_static" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-yg-kqO">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1000" id="7b6-hZ-2iP"/>
@@ -90,13 +90,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SYs-yg-kqO" firstAttribute="top" secondItem="dES-uj-Lz8" secondAttribute="top" id="CQj-o1-Jpu"/>
-                                    <constraint firstAttribute="bottom" secondItem="SYs-yg-kqO" secondAttribute="bottom" id="UKL-FF-SRu"/>
+                                    <constraint firstAttribute="bottom" secondItem="SYs-yg-kqO" secondAttribute="bottom" id="UYF-iZ-cJ7"/>
                                     <constraint firstItem="SYs-yg-kqO" firstAttribute="leading" secondItem="dES-uj-Lz8" secondAttribute="leading" id="cXC-4s-w0p"/>
                                     <constraint firstAttribute="trailing" secondItem="SYs-yg-kqO" secondAttribute="trailing" id="orT-gI-OKQ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dES-uj-Lz8" firstAttribute="leading" secondItem="ta5-qL-XSO" secondAttribute="leading" id="E3d-5L-7X9"/>
                             <constraint firstItem="dES-uj-Lz8" firstAttribute="trailing" secondItem="ta5-qL-XSO" secondAttribute="trailing" id="PCx-2A-JWs"/>
@@ -314,27 +314,27 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAC-eE-ub6">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_modification_static" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-UO-pNo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_long" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-UO-pNo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="414" id="mE0-6N-cCD"/>
-                                            <constraint firstAttribute="height" constant="650" id="xoK-5X-4ip"/>
+                                            <constraint firstAttribute="height" constant="1000" id="xoK-5X-4ip"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="top" secondItem="zAC-eE-ub6" secondAttribute="top" id="0HB-ws-x78"/>
-                                    <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" id="3JK-oO-ILg"/>
+                                    <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" constant="-377" id="3JK-oO-ILg"/>
                                     <constraint firstAttribute="trailing" secondItem="wQj-UO-pNo" secondAttribute="trailing" id="7AZ-2N-zKl"/>
                                     <constraint firstAttribute="trailing" secondItem="wQj-UO-pNo" secondAttribute="trailing" id="7T2-wi-cf2"/>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="leading" secondItem="zAC-eE-ub6" secondAttribute="leading" id="TqO-FT-uwL"/>
-                                    <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" id="VIh-30-fhf"/>
+                                    <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" constant="-377" id="VIh-30-fhf"/>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="top" secondItem="zAC-eE-ub6" secondAttribute="top" id="iBz-8o-U7k"/>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="leading" secondItem="zAC-eE-ub6" secondAttribute="leading" id="jUn-VJ-Aca"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zAC-eE-ub6" firstAttribute="bottom" secondItem="Fq7-8U-Aid" secondAttribute="bottom" id="359-rE-IBD"/>
                             <constraint firstItem="zAC-eE-ub6" firstAttribute="leading" secondItem="Fq7-8U-Aid" secondAttribute="leading" id="AEy-fJ-w3O"/>
@@ -766,9 +766,9 @@
     </scenes>
     <resources>
         <image name="Music" width="36" height="36"/>
+        <image name="album_long" width="375" height="1000"/>
         <image name="friends_static" width="375" height="1000"/>
         <image name="friends_tab" width="25" height="25"/>
         <image name="user_mod_tab" width="25" height="25"/>
-        <image name="user_modification_static" width="375" height="667"/>
     </resources>
 </document>
