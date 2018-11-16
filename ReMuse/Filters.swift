@@ -119,7 +119,7 @@ public class Filters{
             if on {
                 songProcessor.moogLadder.cutoffFrequency = 1600
                 songProcessor.moogLadder.resonance = 0.580
-                songProcessor.filterMixer.balance = 1.0
+                songProcessor.filterMixer.balance = 0.5
             } else {
                 songProcessor.filterMixer.balance = 0
             }
