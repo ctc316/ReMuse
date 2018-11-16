@@ -22,6 +22,7 @@ extension MultiSelecetionViewController:UICollectionViewDelegate,UICollectionVie
         
         //remove item
         reloadAndPositionScroll(idp: item.row!, remove: true)
+        SwiftMultiSelect.initialSelected = SwiftMultiSelect.initialSelected.filter { $0 != item}
         
         if self.selectedItems.count <= 0 {
             //Comunicate deselection to delegate
