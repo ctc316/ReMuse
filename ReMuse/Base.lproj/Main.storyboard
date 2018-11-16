@@ -190,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-L2-2wu" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
-                                <rect key="frame" x="15" y="502" width="384" height="65"/>
+                                <rect key="frame" x="50" y="502" width="314" height="65"/>
                                 <color key="tintColor" red="0.48627450979999998" green="0.76862745099999996" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
@@ -243,31 +243,30 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-uh-nP4">
                                 <rect key="frame" x="10" y="89" width="394" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="373" id="RIE-FZ-wPp"/>
+                                    <constraint firstAttribute="width" constant="394" id="qG4-GE-Cs7"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-aq-H3Q">
-                                <rect key="frame" x="258" y="567" width="106" height="61"/>
+                                <rect key="frame" x="194" y="595" width="220" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="nd8-AD-zww"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="yxB-7V-2vT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Filters">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="41"/>
+                                <state key="normal" title="Filters"/>
                                 <connections>
                                     <segue destination="LGm-Pd-OjF" kind="show" id="aly-2m-Qdf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-c2-YoH">
-                                <rect key="frame" x="50" y="567" width="75" height="61"/>
+                                <rect key="frame" x="0.0" y="595" width="212" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="AL4-Lo-FJT"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="jzE-n3-M5i"/>
+                                    <constraint firstAttribute="width" constant="212" id="cei-Xw-dMb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="41"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="play:" destination="nDH-ye-BdK" eventType="touchUpInside" id="lWQ-pm-chD"/>
                                 </connections>
@@ -276,17 +275,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wRa-L2-2wu" firstAttribute="top" secondItem="uF9-uh-nP4" secondAttribute="bottom" constant="40" id="13u-bB-IyY"/>
-                            <constraint firstItem="wuY-aq-H3Q" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" id="5Wi-4L-Suz"/>
+                            <constraint firstItem="wuY-aq-H3Q" firstAttribute="baseline" secondItem="7nA-c2-YoH" secondAttribute="baseline" id="2kX-gm-eNJ"/>
+                            <constraint firstItem="7nA-c2-YoH" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" id="2nz-IU-0dC"/>
                             <constraint firstItem="Gle-ml-HP2" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" constant="120" id="GQi-vN-BE9"/>
                             <constraint firstItem="wRa-L2-2wu" firstAttribute="top" secondItem="uF9-uh-nP4" secondAttribute="bottom" constant="40" id="GsW-9p-ezM"/>
-                            <constraint firstItem="wRa-L2-2wu" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="15" id="JmY-ro-tbP"/>
-                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="wRa-L2-2wu" secondAttribute="trailing" constant="15" id="KD2-XM-FDx"/>
-                            <constraint firstItem="7nA-c2-YoH" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="50" id="PlL-sc-aP1"/>
-                            <constraint firstItem="7nA-c2-YoH" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" id="RGY-Wi-TeN"/>
+                            <constraint firstItem="wRa-L2-2wu" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="50" id="JmY-ro-tbP"/>
+                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="wRa-L2-2wu" secondAttribute="trailing" constant="50" id="KD2-XM-FDx"/>
+                            <constraint firstItem="wuY-aq-H3Q" firstAttribute="trailing" secondItem="MGd-PL-Hu3" secondAttribute="trailing" id="Ym4-yj-TI8"/>
                             <constraint firstItem="uF9-uh-nP4" firstAttribute="top" secondItem="PFE-4l-wzs" secondAttribute="bottom" constant="25" id="ZAo-OU-EyE"/>
+                            <constraint firstItem="wuY-aq-H3Q" firstAttribute="leading" secondItem="7nA-c2-YoH" secondAttribute="trailing" constant="-18" id="Zxw-0P-1c8"/>
                             <constraint firstItem="uF9-uh-nP4" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="10" id="rKh-FY-iKq"/>
+                            <constraint firstItem="Gle-ml-HP2" firstAttribute="top" secondItem="7nA-c2-YoH" secondAttribute="bottom" constant="31" id="s1N-XA-pup"/>
                             <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="uF9-uh-nP4" secondAttribute="trailing" constant="10" id="t7W-VV-KgE"/>
-                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="wuY-aq-H3Q" secondAttribute="trailing" constant="50" id="ts1-u4-qCz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGd-PL-Hu3"/>
                     </view>
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p7-Xy-oyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.19999999999999" y="-107.49625187406298"/>
+            <point key="canvasLocation" x="-215.94202898550725" y="-107.60869565217392"/>
         </scene>
         <!--ReMused-->
         <scene sceneID="moq-U0-pX6">
