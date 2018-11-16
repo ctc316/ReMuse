@@ -10,10 +10,10 @@ import AudioKit
 import AVFoundation
 import MediaPlayer
 import UIKit
-import FDWaveformView
+import RangeSeekSlider
 
 
-class SongViewController: UIViewController {
+class SongViewController: UIViewController, RangeSeekSliderDelegate {
 
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var albumImageView: UIImageView!
@@ -55,7 +55,7 @@ class SongViewController: UIViewController {
                             self.loadSong()
                             self.playButton.isUserInteractionEnabled = true
                             self.playButton.setTitle("Stop", for: UIControl.State())
-//                            self.songProcessor.iTunesPlaying = true
+                            self.songProcessor.iTunesPlaying = true
                         } else {
                             fail()
                         }
@@ -73,6 +73,8 @@ class SongViewController: UIViewController {
         playButton.isUserInteractionEnabled = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(barButton:)))
         
+        rangeSelector.delegate = self
+        
         self.albumImageView.image = self.art
     }
 
@@ -81,7 +83,7 @@ class SongViewController: UIViewController {
     }
 
     @IBAction func play(_ sender: UIButton) {
-//        songProcessor.iTunesPlaying = !songProcessor.iTunesPlaying
+        songProcessor.iTunesPlaying = !songProcessor.iTunesPlaying
         playButton.setTitle(songProcessor.iTunesPlaying ? "Stop" : "Play", for: UIControl.State())
     }
 
@@ -91,8 +93,6 @@ class SongViewController: UIViewController {
         let url = URL(fileURLWithPath: exportPath)
         
         //display
-//        self.waveformView.audioURL = url
-        
         if FileManager.default.fileExists(atPath: url.path) == false {
             print("exportPath: \(exportPath)")
             print("File does not exist.")
@@ -103,11 +103,27 @@ class SongViewController: UIViewController {
             let exportedFile = try AKAudioFile(forReading:url)
             if songProcessor.iTunesFilePlayer == nil {
                 songProcessor.iTunesFilePlayer = AKPlayer(audioFile: exportedFile)
+                
+                songProcessor.iTunesFilePlayer!.buffering = .always
                 songProcessor.iTunesFilePlayer! >>> songProcessor.playerMixer
             }
+            
             guard let iTunesFilePlayer = songProcessor.iTunesFilePlayer else { return }
-
+            
             iTunesFilePlayer.load(audioFile: exportedFile)
+            
+            // range selector
+            rangeSelector.minValue = 0
+            rangeSelector.maxValue = CGFloat(iTunesFilePlayer.duration)
+            rangeSelector.selectedMinValue = 0
+            rangeSelector.selectedMaxValue = rangeSelector.maxValue
+            
+            // for refreshing
+            rangeSelector.minValue = 0
+            
+            songProcessor.loop_start = 0
+            songProcessor.loop_end = iTunesFilePlayer.duration
+            
         } catch {
             print(error)
         }
@@ -121,5 +137,39 @@ class SongViewController: UIViewController {
             }
         }
     }
-    @IBOutlet weak var waveformView: FDWaveformView!
+    
+    
+    @IBOutlet weak var rangeSelector: RangeSeekSlider!
+    
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+        guard let iTunesFilePlayer = songProcessor.iTunesFilePlayer else { return }
+        
+        songProcessor.loop_start = Double(minValue)
+        songProcessor.loop_end = Double(maxValue)
+        if songProcessor.iTunesPlaying {
+            songProcessor.iTunesPlaying = false
+            songProcessor.iTunesPlaying = true
+        }
+    }
+    
+    func didStartTouches(in slider: RangeSeekSlider) {
+        
+    }
+    
+    func didEndTouches(in slider: RangeSeekSlider) {
+        
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String? {
+        let sec = Int(minValue) % 60
+        let min = Int(minValue / 60)
+        return String(format: "%02d:%02d", min, sec)
+        
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMaxValue maxValue: CGFloat) -> String? {
+        let sec = Int(maxValue) % 60
+        let min = Int(maxValue / 60)
+        return String(format: "%02d:%02d", min, sec) }
 }

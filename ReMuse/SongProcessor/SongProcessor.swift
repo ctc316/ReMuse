@@ -32,12 +32,28 @@ class SongProcessor: NSObject, UIDocumentInteractionControllerDelegate {
 
     fileprivate var docController: UIDocumentInteractionController?
 
+    var loop_start: Double = 0
+    var loop_end: Double = 0
+    
     var iTunesPlaying: Bool {
         set {
             if newValue {
                 guard let iTunesFilePlayer = iTunesFilePlayer else { return }
-                if !iTunesFilePlayer.isPlaying { iTunesFilePlayer.play() }
-            } else {
+                if !iTunesFilePlayer.isPlaying {
+                    if loop_end == -1 {
+                        loop_end = iTunesFilePlayer.duration
+                    }
+                    if loop_start >= loop_end{
+                        loop_start = 0
+                    }
+                    iTunesFilePlayer.isLooping = true
+                    iTunesFilePlayer.buffering = .always
+                    iTunesFilePlayer.loop.start = loop_start
+                    iTunesFilePlayer.loop.end = loop_end
+                    iTunesFilePlayer.play(from: loop_start)
+                }
+            }
+            else {
                 iTunesFilePlayer?.stop()
             }
         }
@@ -145,10 +161,15 @@ class SongProcessor: NSObject, UIDocumentInteractionControllerDelegate {
         case loops
     }
 
+    func completionHandler() {
+        if iTunesPlaying {
+            iTunesPlaying = false
+            iTunesPlaying = true
+        }
+    }
     fileprivate func mixDownItunes(url: URL) throws {
 
         offlineRender.internalRenderEnabled = false
-
         guard let player = iTunesFilePlayer else {
             offlineRender.internalRenderEnabled = true
             throw NSError(domain: "SongProcessor", code: 1, userInfo: [NSLocalizedDescriptionKey: "Target itunes but no player exists"])
@@ -162,7 +183,6 @@ class SongProcessor: NSObject, UIDocumentInteractionControllerDelegate {
         try offlineRender.renderToURL(url, duration: duration)
         player.stop()
         offlineRender.internalRenderEnabled = true
-
     }
     fileprivate func mixDownLoops(url: URL, loops: Int) throws {
 
