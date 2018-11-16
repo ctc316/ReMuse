@@ -103,6 +103,8 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
 
             //Comunicate deselection to delegate
             SwiftMultiSelect.delegate?.swiftMultiSelect(didUnselectItem: item)
+            SwiftMultiSelect.initialSelected = SwiftMultiSelect.initialSelected.filter { $0 != item}
+
             
             //Reload collectionview
             self.reloadAndPositionScroll(idp: item.row!, remove:true)
@@ -116,6 +118,7 @@ extension MultiSelecetionViewController:UITableViewDelegate,UITableViewDataSourc
             
             //Add current item to selected
             selectedItems.append(item)
+            SwiftMultiSelect.initialSelected.append(item)
             
             //Comunicate selection to delegate
             SwiftMultiSelect.delegate?.swiftMultiSelect(didSelectItem: item)

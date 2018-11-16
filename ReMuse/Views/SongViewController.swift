@@ -17,7 +17,7 @@ class SongViewController: UIViewController, RangeSeekSliderDelegate {
 
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var albumImageView: UIImageView!
-
+    
     var exportPath: String = ""
     var startTime: Float = 0.00
     let songProcessor = SongProcessor.sharedInstance
@@ -74,7 +74,8 @@ class SongViewController: UIViewController, RangeSeekSliderDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(barButton:)))
         
         rangeSelector.delegate = self
-        
+        rangeSelector.minLabelFont = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
+        rangeSelector.maxLabelFont = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
         self.albumImageView.image = self.art
     }
 
@@ -143,7 +144,7 @@ class SongViewController: UIViewController, RangeSeekSliderDelegate {
     
     
     func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
-        guard let iTunesFilePlayer = songProcessor.iTunesFilePlayer else { return }
+        guard songProcessor.iTunesFilePlayer != nil else { return }
         
         songProcessor.loop_start = Double(minValue)
         songProcessor.loop_end = Double(maxValue)
