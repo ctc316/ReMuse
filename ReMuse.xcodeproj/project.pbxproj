@@ -10,6 +10,13 @@
 		6110BDD021795E6D00ADB809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110BDCF21795E6D00ADB809 /* AppDelegate.swift */; };
 		6110BDD521795E6D00ADB809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6110BDD321795E6D00ADB809 /* Main.storyboard */; };
 		61695288217965ED00C60B53 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61695287217965ED00C60B53 /* Launch Screen.storyboard */; };
+		618C0559219E95480020AC23 /* BitCrusherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0553219E95480020AC23 /* BitCrusherViewController.swift */; };
+		618C055A219E95480020AC23 /* CostelloReverbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0554219E95480020AC23 /* CostelloReverbViewController.swift */; };
+		618C055B219E95480020AC23 /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0555219E95480020AC23 /* EffectsViewController.swift */; };
+		618C055C219E95480020AC23 /* MoogLadderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0556219E95480020AC23 /* MoogLadderViewController.swift */; };
+		618C055D219E95480020AC23 /* PitchShifterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0557219E95480020AC23 /* PitchShifterViewController.swift */; };
+		618C055E219E95480020AC23 /* VariableDelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C0558219E95480020AC23 /* VariableDelayViewController.swift */; };
+		618C0560219EA01D0020AC23 /* VolumnBoosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C055F219EA01D0020AC23 /* VolumnBoosterViewController.swift */; };
 		618EC194218F899D003280E7 /* SongExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC191218F899D003280E7 /* SongExporter.swift */; };
 		618EC195218F899D003280E7 /* SongProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC193218F899D003280E7 /* SongProcessor.swift */; };
 		618EC197218F8A12003280E7 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618EC196218F8A12003280E7 /* SongsViewController.swift */; };
@@ -36,6 +43,13 @@
 		6110BDD421795E6D00ADB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6110BDDB21795E6F00ADB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61695287217965ED00C60B53 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		618C0553219E95480020AC23 /* BitCrusherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCrusherViewController.swift; sourceTree = "<group>"; };
+		618C0554219E95480020AC23 /* CostelloReverbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostelloReverbViewController.swift; sourceTree = "<group>"; };
+		618C0555219E95480020AC23 /* EffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
+		618C0556219E95480020AC23 /* MoogLadderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoogLadderViewController.swift; sourceTree = "<group>"; };
+		618C0557219E95480020AC23 /* PitchShifterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitchShifterViewController.swift; sourceTree = "<group>"; };
+		618C0558219E95480020AC23 /* VariableDelayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableDelayViewController.swift; sourceTree = "<group>"; };
+		618C055F219EA01D0020AC23 /* VolumnBoosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumnBoosterViewController.swift; sourceTree = "<group>"; };
 		618EC191218F899D003280E7 /* SongExporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongExporter.swift; sourceTree = "<group>"; };
 		618EC192218F899D003280E7 /* SongProcessor.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SongProcessor.entitlements; sourceTree = "<group>"; };
 		618EC193218F899D003280E7 /* SongProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongProcessor.swift; sourceTree = "<group>"; };
@@ -113,9 +127,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		618C0552219E95480020AC23 /* EffectViews */ = {
+			isa = PBXGroup;
+			children = (
+				618C0553219E95480020AC23 /* BitCrusherViewController.swift */,
+				618C0554219E95480020AC23 /* CostelloReverbViewController.swift */,
+				618C0555219E95480020AC23 /* EffectsViewController.swift */,
+				618C0556219E95480020AC23 /* MoogLadderViewController.swift */,
+				618C0557219E95480020AC23 /* PitchShifterViewController.swift */,
+				618C0558219E95480020AC23 /* VariableDelayViewController.swift */,
+				618C055F219EA01D0020AC23 /* VolumnBoosterViewController.swift */,
+			);
+			path = EffectViews;
+			sourceTree = "<group>";
+		};
 		618EC190218F895D003280E7 /* SongProcessor */ = {
 			isa = PBXGroup;
 			children = (
+				618C0552219E95480020AC23 /* EffectViews */,
 				618EC191218F899D003280E7 /* SongExporter.swift */,
 				618EC192218F899D003280E7 /* SongProcessor.entitlements */,
 				618EC193218F899D003280E7 /* SongProcessor.swift */,
@@ -283,19 +312,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AB0FD8219D10C200A36927 /* CustomOneCell.swift in Sources */,
+				618C055B219E95480020AC23 /* EffectsViewController.swift in Sources */,
+				618C055D219E95480020AC23 /* PitchShifterViewController.swift in Sources */,
+				618C0559219E95480020AC23 /* BitCrusherViewController.swift in Sources */,
 				618EC197218F8A12003280E7 /* SongsViewController.swift in Sources */,
+				618C055A219E95480020AC23 /* CostelloReverbViewController.swift in Sources */,
 				618EC194218F899D003280E7 /* SongExporter.swift in Sources */,
 				61AB0FCF219CE7F200A36927 /* CustomTableCell.swift in Sources */,
 				61AB0FD4219CE7F200A36927 /* MultiSelectionTableView.swift in Sources */,
 				61AB0FDA219D23D400A36927 /* Filters.swift in Sources */,
 				61AB0FD0219CE7F200A36927 /* MultiSelectionCollectionView.swift in Sources */,
 				61AB0FD3219CE7F200A36927 /* MultiSelectionViewController.swift in Sources */,
+				618C055E219E95480020AC23 /* VariableDelayViewController.swift in Sources */,
 				618EC195218F899D003280E7 /* SongProcessor.swift in Sources */,
+				618C055C219E95480020AC23 /* MoogLadderViewController.swift in Sources */,
 				6110BDD021795E6D00ADB809 /* AppDelegate.swift in Sources */,
 				61AB0FD2219CE7F200A36927 /* ContactsLibrary.swift in Sources */,
 				61D4C51821914711003FA479 /* SongViewController.swift in Sources */,
 				61AB0FCE219CE7F200A36927 /* CustomCollectionCell.swift in Sources */,
 				61AB0FD1219CE7F200A36927 /* SwiftMultiSelect.swift in Sources */,
+				618C0560219EA01D0020AC23 /* VolumnBoosterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

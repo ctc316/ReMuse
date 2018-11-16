@@ -37,6 +37,16 @@ class SongsViewController: UITableViewController {
         SwiftMultiSelect.items = Filters.getItems()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let songProcessor = SongProcessor.sharedInstance
+        songProcessor.iTunesPlaying = false
+        
+        Filters.reset()
+        SwiftMultiSelect.initialSelected = []
+    
+    }
+    
     
     // MARK: - Table view data source
     

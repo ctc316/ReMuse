@@ -71,7 +71,6 @@ class SongViewController: UIViewController, RangeSeekSliderDelegate {
 
         playButton.setTitle("Loading", for: UIControl.State())
         playButton.isUserInteractionEnabled = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(barButton:)))
         
         rangeSelector.delegate = self
         rangeSelector.minLabelFont = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
@@ -129,16 +128,6 @@ class SongViewController: UIViewController, RangeSeekSliderDelegate {
             print(error)
         }
     }
-    
-    @objc func share(barButton: UIBarButtonItem) {
-        renderAndShare { docController in
-            guard let canOpen = docController?.presentOpenInMenu(from: barButton, animated: true) else { return }
-            if !canOpen {
-                self.present(self.alertForShareFail(), animated: true, completion: nil)
-            }
-        }
-    }
-    
     
     @IBOutlet weak var rangeSelector: RangeSeekSlider!
     

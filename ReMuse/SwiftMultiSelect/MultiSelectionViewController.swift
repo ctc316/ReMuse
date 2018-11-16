@@ -132,6 +132,9 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         //Register cell class
         tableView.register(UINib(nibName: "CustomOneCell", bundle: nil), forCellReuseIdentifier: "cell")
         
+        let lpgr:UILongPressGestureRecognizer? = UILongPressGestureRecognizer(target: self, action: #selector(longPressAction(gestureReconizer:)))
+        tableView.addGestureRecognizer(lpgr!)
+        
         //Register collectionvie delegate
         selectionScrollView.delegate    =   self
         selectionScrollView.dataSource  =   self
@@ -142,7 +145,8 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         
         //register search delegate
         searchBar.delegate = self
-        
+        searchBar.returnKeyType = .done
+        searchBar.enablesReturnKeyAutomatically = false
         //Prevent adding top margin to collectionviewcell
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -191,6 +195,25 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         })
     }
     
+    @objc func longPressAction(gestureReconizer: UILongPressGestureRecognizer) {
+        if gestureReconizer.state == UIGestureRecognizer.State.began {
+            let curPoint:CGPoint = gestureReconizer.location(in: self.tableView)
+            if let indexPath = self.tableView.indexPathForRow(at: curPoint) {
+                let curCell = self.tableView.cellForRow(at: indexPath)
+                if curCell?.accessoryType != UITableViewCell.AccessoryType.checkmark{
+                    tableView(tableView, didSelectRowAt: indexPath)
+                }
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Back"
+                navigationItem.backBarButtonItem = backItem
+                performSegue(withIdentifier: (SwiftMultiSelect.items?[indexPath.row].initials)!, sender: nil)
+            }else{
+                print("not find cell for current long press point")
+            }
+        }
+    }
+    
     
     /// Selector for right button
     @objc public func selectionDidEnd(){
@@ -208,10 +231,28 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         
     }
     
+    @objc func share(barButton: UIBarButtonItem) {
+        renderAndShare { docController in
+            guard let canOpen = docController?.presentOpenInMenu(from: barButton, animated: true) else { return }
+            if !canOpen {
+                self.present(self.alertForShareFail(), animated: true, completion: nil)
+            }
+        }
+    }
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap(recognizer:)))
+        tapRecognizer.numberOfTapsRequired = 1
+        tapRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapRecognizer)
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(barButton:)))
+
         
 //        self.title = Config.viewTitle
         
@@ -240,18 +281,22 @@ class MultiSelecetionViewController: UIViewController,UIGestureRecognizerDelegat
         
     }
     
-//   override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//        print("in shouldReceiveTouch")
-//        if (touch.view == autocompleteList){
-//            println("touching autocomplete list")
-//            return false
-//        }
-//        gestureRecognizer.delegate = self
-//        return true
+    @objc func handleSingleTap(recognizer: UITapGestureRecognizer) {
+        self.searchBar.endEditing(true)
+    }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("HELLO")
+//        super.touchesBegan(touches, with: event)
+//        self.searchBar.endEditing(true)
+//        self.next?.touchesBegan(touches, with: event)
 //    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.next?.touchesBegan(touches, with: event)
+    
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        self.searchBar.endEditing(true)
     }
+    
 }
