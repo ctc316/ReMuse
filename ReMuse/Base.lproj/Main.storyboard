@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S0u-PL-aXP">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S0u-PL-aXP">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,7 @@
                     <tabBarItem key="tabBarItem" title="Songs" image="Music" id="hG4-iQ-EbU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mdS-TK-PFA">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -57,7 +57,7 @@
                     <tabBarItem key="tabBarItem" title="Friends" image="friends_tab" id="L5Y-a1-Rje"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NF1-X5-vit">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -74,17 +74,17 @@
             <objects>
                 <viewController id="Mvx-rh-wgS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvc-m7-lTK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dES-uj-Lz8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends_static" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-yg-kqO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends_static" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-yg-kqO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1000" id="7b6-hZ-2iP"/>
-                                            <constraint firstAttribute="width" constant="375" id="k4u-28-0v4"/>
+                                            <constraint firstAttribute="width" constant="414" id="k4u-28-0v4"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQ6-DX-ny5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2631.1999999999998" y="1443.3283358320841"/>
+            <point key="canvasLocation" x="-2631.8840579710145" y="1442.9347826086957"/>
         </scene>
         <!--ReMuse Filters-->
         <scene sceneID="SxA-UW-8BC">
@@ -134,26 +134,26 @@
             <objects>
                 <tableViewController id="8Yu-Pq-9E3" customClass="SongsViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tpr-ap-0sC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" textLabel="EWW-nm-eTJ" detailTextLabel="TpS-cO-CgL" style="IBUITableViewCellStyleValue1" id="ZoV-Sp-H6d">
-                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZoV-Sp-H6d" id="4fL-Mv-rIU">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EWW-nm-eTJ">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20.000000000000004" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TpS-cO-CgL">
-                                            <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="332" y="11.999999999999998" width="44" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,12 +186,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Gle-ml-HP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ajQ-RB-ZIV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-L2-2wu" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
-                                <rect key="frame" x="16" y="433" width="343" height="66"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-L2-2wu" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                <rect key="frame" x="15" y="502" width="384" height="65"/>
                                 <color key="tintColor" red="0.48627450979999998" green="0.76862745099999996" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
@@ -242,24 +241,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-uh-nP4">
-                                <rect key="frame" x="4" y="87" width="365" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-uh-nP4">
+                                <rect key="frame" x="10" y="89" width="394" height="373"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-c2-YoH">
-                                <rect key="frame" x="23" y="496" width="178" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="play:" destination="nDH-ye-BdK" eventType="touchUpInside" id="lWQ-pm-chD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-aq-H3Q">
-                                <rect key="frame" x="202" y="496" width="141" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-aq-H3Q">
+                                <rect key="frame" x="258" y="567" width="106" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="nd8-AD-zww"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="yxB-7V-2vT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="Filters">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -268,8 +258,36 @@
                                     <segue destination="LGm-Pd-OjF" kind="show" id="aly-2m-Qdf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nA-c2-YoH">
+                                <rect key="frame" x="50" y="567" width="75" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="AL4-Lo-FJT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="jzE-n3-M5i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="nDH-ye-BdK" eventType="touchUpInside" id="lWQ-pm-chD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wRa-L2-2wu" firstAttribute="top" secondItem="uF9-uh-nP4" secondAttribute="bottom" constant="40" id="13u-bB-IyY"/>
+                            <constraint firstItem="wuY-aq-H3Q" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" id="5Wi-4L-Suz"/>
+                            <constraint firstItem="Gle-ml-HP2" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" constant="120" id="GQi-vN-BE9"/>
+                            <constraint firstItem="wRa-L2-2wu" firstAttribute="top" secondItem="uF9-uh-nP4" secondAttribute="bottom" constant="40" id="GsW-9p-ezM"/>
+                            <constraint firstItem="wRa-L2-2wu" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="15" id="JmY-ro-tbP"/>
+                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="wRa-L2-2wu" secondAttribute="trailing" constant="15" id="KD2-XM-FDx"/>
+                            <constraint firstItem="7nA-c2-YoH" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="50" id="PlL-sc-aP1"/>
+                            <constraint firstItem="7nA-c2-YoH" firstAttribute="top" secondItem="wRa-L2-2wu" secondAttribute="bottom" id="RGY-Wi-TeN"/>
+                            <constraint firstItem="uF9-uh-nP4" firstAttribute="top" secondItem="PFE-4l-wzs" secondAttribute="bottom" constant="25" id="ZAo-OU-EyE"/>
+                            <constraint firstItem="uF9-uh-nP4" firstAttribute="leading" secondItem="MGd-PL-Hu3" secondAttribute="leading" constant="10" id="rKh-FY-iKq"/>
+                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="uF9-uh-nP4" secondAttribute="trailing" constant="10" id="t7W-VV-KgE"/>
+                            <constraint firstItem="MGd-PL-Hu3" firstAttribute="trailing" secondItem="wuY-aq-H3Q" secondAttribute="trailing" constant="50" id="ts1-u4-qCz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MGd-PL-Hu3"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Th-op-mye">
@@ -290,16 +308,16 @@
             <objects>
                 <viewController id="tH1-gP-268" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYA-K5-7L0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAC-eE-ub6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user_modification_static" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-UO-pNo">
-                                        <rect key="frame" x="2" y="0.0" width="370" height="650"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_modification_static" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-UO-pNo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="mE0-6N-cCD"/>
+                                            <constraint firstAttribute="width" constant="414" id="mE0-6N-cCD"/>
                                             <constraint firstAttribute="height" constant="650" id="xoK-5X-4ip"/>
                                         </constraints>
                                     </imageView>
@@ -307,7 +325,11 @@
                                 <constraints>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="top" secondItem="zAC-eE-ub6" secondAttribute="top" id="0HB-ws-x78"/>
                                     <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" id="3JK-oO-ILg"/>
+                                    <constraint firstAttribute="trailing" secondItem="wQj-UO-pNo" secondAttribute="trailing" id="7AZ-2N-zKl"/>
                                     <constraint firstAttribute="trailing" secondItem="wQj-UO-pNo" secondAttribute="trailing" id="7T2-wi-cf2"/>
+                                    <constraint firstItem="wQj-UO-pNo" firstAttribute="leading" secondItem="zAC-eE-ub6" secondAttribute="leading" id="TqO-FT-uwL"/>
+                                    <constraint firstAttribute="bottom" secondItem="wQj-UO-pNo" secondAttribute="bottom" id="VIh-30-fhf"/>
+                                    <constraint firstItem="wQj-UO-pNo" firstAttribute="top" secondItem="zAC-eE-ub6" secondAttribute="top" id="iBz-8o-U7k"/>
                                     <constraint firstItem="wQj-UO-pNo" firstAttribute="leading" secondItem="zAC-eE-ub6" secondAttribute="leading" id="jUn-VJ-Aca"/>
                                 </constraints>
                             </scrollView>
@@ -325,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHq-Yq-uM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1868" y="1443"/>
+            <point key="canvasLocation" x="-1868.1159420289857" y="1442.9347826086957"/>
         </scene>
         <!--ReMused-->
         <scene sceneID="5yt-wu-ehq">
@@ -334,7 +356,7 @@
                     <tabBarItem key="tabBarItem" title="ReMused" image="user_mod_tab" id="40p-r1-Ihr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jr2-S6-Jxy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -349,17 +371,17 @@
         <!--Costello Reverb View Controller-->
         <scene sceneID="bNz-lK-c8R">
             <objects>
-                <viewController id="a4l-fS-LZy" userLabel="Costello Reverb View Controller" customClass="CostelloReverbViewController" customModule="SongProcessor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a4l-fS-LZy" userLabel="Costello Reverb View Controller" customClass="CostelloReverbViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PES-Xp-UwX"/>
                         <viewControllerLayoutGuide type="bottom" id="Ymq-va-jNs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RDZ-5Y-ynH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMO-vX-lyf" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="285" width="335" height="90"/>
+                                <rect key="frame" x="20" y="285" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="g0h-12-Trg"/>
@@ -370,7 +392,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9b-Ra-1KE" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="119" width="335" height="90"/>
+                                <rect key="frame" x="20" y="119" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Bl2-jw-iue"/>
@@ -405,17 +427,17 @@
         <!--Pitch Shifter Scene-->
         <scene sceneID="TPh-s4-J2H">
             <objects>
-                <viewController id="icS-PX-wRC" userLabel="Pitch Shifter Scene" customClass="PitchShifterViewController" customModule="SongProcessor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="icS-PX-wRC" userLabel="Pitch Shifter Scene" customClass="PitchShifterViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rE3-sR-oDz"/>
                         <viewControllerLayoutGuide type="bottom" id="CIr-f7-EuI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F3i-yi-oMB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4s0-Dl-bOZ" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="285" width="335" height="90"/>
+                                <rect key="frame" x="20" y="285" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="1bT-7H-KY8"/>
@@ -427,7 +449,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-A4-V4E" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="119" width="335" height="90"/>
+                                <rect key="frame" x="20" y="119" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="Neb-A2-Fhl"/>
@@ -464,17 +486,17 @@
         <!--Bit Crusher-->
         <scene sceneID="WLR-Lg-bOp">
             <objects>
-                <viewController id="8bj-fV-jho" customClass="BitCrusherViewController" customModule="SongProcessor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8bj-fV-jho" customClass="BitCrusherViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L2I-f8-uE3"/>
                         <viewControllerLayoutGuide type="bottom" id="cos-Gw-3K0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GI2-tx-DmB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldX-UD-hKp" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="0.0" y="119" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="GLE-JV-a1L"/>
@@ -494,7 +516,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXI-7W-4SC" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="0.0" y="285" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="285" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="8CD-o4-Ovf"/>
@@ -515,7 +537,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeX-Uj-Q6H" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="0.0" y="451" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="451" width="414" height="90"/>
                                 <color key="backgroundColor" red="0.33556698619999997" green="0.3438783091" blue="0.71088274510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="1fe-g6-2pE"/>
@@ -564,17 +586,17 @@
         <!--Delay-->
         <scene sceneID="fEB-nP-sd5">
             <objects>
-                <viewController title="Delay" id="jjO-UB-2Qs" customClass="VariableDelayViewController" customModule="SongProcessor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Delay" id="jjO-UB-2Qs" customClass="VariableDelayViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jLs-1C-4EY"/>
                         <viewControllerLayoutGuide type="bottom" id="nae-x1-I3A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qR8-pq-NIF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBQ-xL-Jlj" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="285" width="335" height="90"/>
+                                <rect key="frame" x="20" y="285" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="xot-hx-gOG"/>
@@ -584,7 +606,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y92-gy-GeK" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="119" width="335" height="90"/>
+                                <rect key="frame" x="20" y="119" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="ud2-mB-zQo"/>
@@ -594,7 +616,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-qn-GL5" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="451" width="335" height="90"/>
+                                <rect key="frame" x="20" y="451" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.33556698619999997" green="0.3438783091" blue="0.71088274510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="YbC-K6-PlV"/>
@@ -631,17 +653,17 @@
         <!--Moog Ladder-->
         <scene sceneID="UYO-3z-0qS">
             <objects>
-                <viewController title="Moog Ladder" id="nzw-71-nXG" customClass="MoogLadderViewController" customModule="SongProcessor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Moog Ladder" id="nzw-71-nXG" customClass="MoogLadderViewController" customModule="ReMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8KN-Od-aM1"/>
                         <viewControllerLayoutGuide type="bottom" id="0cC-8v-t5E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8l0-gc-0sl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4c-bE-sEw" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="285" width="335" height="90"/>
+                                <rect key="frame" x="20" y="285" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.37143704300000002" green="0.70446354150000001" blue="0.61085367199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="4pa-p3-knf"/>
@@ -652,7 +674,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-jt-6md" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="119" width="335" height="90"/>
+                                <rect key="frame" x="20" y="119" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="A8t-dK-Gdr"/>
@@ -663,7 +685,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3V-dD-XFh" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="451" width="335" height="90"/>
+                                <rect key="frame" x="20" y="451" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.33556698619999997" green="0.3438783091" blue="0.71088274510000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="8Rw-vX-hnC"/>
@@ -707,11 +729,11 @@
                         <viewControllerLayoutGuide type="bottom" id="659-Zy-Dkv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lX6-xe-dH2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-w1-rTv" customClass="AKSlider" customModule="AudioKitUI">
-                                <rect key="frame" x="20" y="119" width="335" height="90"/>
+                                <rect key="frame" x="20" y="119" width="374" height="90"/>
                                 <color key="backgroundColor" red="0.58762145040000002" green="0.86256819959999997" blue="0.67709666489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="EFI-GF-Upm"/>
